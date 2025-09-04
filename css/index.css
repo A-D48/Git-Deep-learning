@@ -1,0 +1,231 @@
+/* ========== Google Font Import ========== */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap");
+
+/* ========== Base / Theme ========== */
+:root {
+  --bg: #0f1115;
+  --card: #151923;
+  --text: #e8edf5;
+  --muted: #9aa3b2;
+  --accent: #7cc4ff;
+  --hover: orange;
+  --border: #20283a;
+  --maxw: 1000px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 2;
+  font-size: 100%;
+}
+
+nav,
+h1,
+section,
+footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========== Typography ========== */
+h1,
+h2,
+h3 {
+  line-height: 2rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: "Space Grotesk", sans-serif;
+}
+h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+}
+h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  color: var(--accent);
+}
+p {
+  color: var(--text);
+  font-weight: 400;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: var(--hover);
+}
+
+/* ========== Links ========== */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--hover);
+}
+a:focus {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
+}
+
+/* ========== Header / Navigation ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 17, 21, 0.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .header-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.7rem 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand-name {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.header-image {
+  width: 20rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  border: none;
+  padding: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.45rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.main-nav a:hover {
+  background: var(--hover);
+  color: #0b1020;
+  text-decoration: none;
+}
+
+.main-nav .nav-cta {
+  background: var(--accent);
+  color: #0b1020;
+}
+.main-nav .nav-cta:hover {
+  background: var(--hover);
+  color: #0b1020;
+}
+
+/* ========== Images ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* ========== Sections ========== */
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1.25rem auto;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+li + li {
+  margin-top: 0.25rem;
+}
+
+/* ========== Work Gallery ========== */
+#work ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+#work li {
+  background: #0f141f;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+#work li:hover {
+  background: var(--hover);
+  color: var(--hover);
+}
+
+/* ========== Small Screens ========== */
+@media (max-width: 640px) {
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  section {
+    padding: 0.9rem;
+  }
+  .main-nav ul {
+    list-style: none;
+    display: inline;
+    gap: 0.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-image {
+    width: 13rem;
+    height: auto;
+  }
+}
