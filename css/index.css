@@ -288,6 +288,64 @@ li + li {
   border: 0;
 }
 
+/* ========== Footer ========== */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.site-footer p {
+  color: var(--accent);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer p:hover {
+  color: var(--hover);
+  text-decoration: underline;
+}
+
+/* ========== Skills Section ========== */
+#Skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem 1.5rem;
+}
+
+#Skills li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#Skills li:hover {
+  background: var(--hover);
+  color: #0b1020;
+  cursor: pointer;
+}
+
 /* ========== DESKTOP (>= 1024px) ========== */
 @media (min-width: 1024px) {
   h1 {
