@@ -41,6 +41,7 @@
             <li><a href="#experiences">Experiences</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#connect" class="nav-cta">Connect</a></li>
+            <li><a href="#leave-message">Leave a Message</a></li>
           </ul>
         </nav>
       </div>
@@ -212,6 +213,27 @@
           </a>
         </li>
       </ul>
+    </section>
+
+    <section id="leave-message">
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Name:</label>
+        <input type="text" name="usersName" required />
+
+        <label for="usersEmail">Email:</label>
+        <input type="email" name="usersEmail" required />
+
+        <label for="usersMessage">Message:</label>
+        <textarea name="usersMessage" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages" hidden>
+      <h2>Messages</h2>
+      <ul></ul>
     </section>
 
     <footer class="site-footer"></footer>
